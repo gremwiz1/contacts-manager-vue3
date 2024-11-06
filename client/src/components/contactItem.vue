@@ -47,6 +47,7 @@ li {
   border-bottom: 1px solid #ccc;
   transition: background-color 0.3s;
   position: relative;
+  align-items: center;
 }
 
 li:hover {

@@ -16,7 +16,6 @@
 <script lang="ts">
 import { defineComponent, ref, watch } from "vue";
 import { Contact } from "../types/contact";
-import { v4 as uuidv4 } from "uuid";
 
 export default defineComponent({
   props: {
@@ -50,7 +49,7 @@ export default defineComponent({
 
     const submitForm = () => {
       const contactData: Contact = {
-        id: props.contact?.id || uuidv4(),
+        id: props.contact?.id || "",
         name: name.value,
         phone: phone.value,
         email: email.value,
