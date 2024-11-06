@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Управление контактами</h1>
     <SearchBar @search="searchContacts" />
-    <button @click="openModal">Добавить контакт</button>
+    <button @click="openModal(null)">Добавить контакт</button>
     <ContactList
       :contacts="filteredContacts"
       @edit="openModal"
