@@ -10,7 +10,7 @@
 
 ```bash
 git clone https://github.com/gremwiz1/contacts-manager-vue3.git
-cd contact-managemen
+cd contacts-manager-vue3
 ```
 
 2. Установка зависимостей сервера
