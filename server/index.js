@@ -19,7 +19,14 @@ app.get('/contacts', (req, res) => {
 
 // Добавление нового контакта
 app.post('/contacts', (req, res) => {
-  const newContact = { id: String(Date.now()), ...req.body };
+  const { name, phone, email } = req.body;
+
+  // Проверка на заполненность полей
+  if (!name || !phone || !email) {
+    return res.status(400).json({ message: "Все поля обязательны для заполнения." });
+  }
+
+  const newContact = { id: String(Date.now()), name, phone, email };
   contacts.push(newContact);
   res.status(201).json(newContact);
 });
